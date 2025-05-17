@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Examples Course</title>
+
+    <link rel="stylesheet" href="/style.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="p-4">
+    <div class="container">
+      <section id="transitions-keyframes-transforms" class="mb-5">
+        <h2>1. Transitions, Keyframes & Transforms</h2>
+        <!-- Transition Example -->
+        <button class="button mb-3">Hover Over Me</button>
+        <!-- Fade-in Example (applied via class 'fade-in') -->
+        <div class="fade-in mb-3 p-3 bg-light">I fade in!</div>
+        <!-- Transform Example -->
+        <div class="box mb-3">Hover over me for transform</div>
+      </section>
+
+      <!-- 2. Selectors & Pseudo-classes -->
+
+      <section id="selectors-pseudo" class="mb-5">
+        <h2>2. Selectors & Pseudo-classes</h2>
+        <!-- Descendant, Child, Sibling selectors examples -->
+        <div class="parent mb-3">
+          <p>Parent element</p>
+          <div class="child">Child element (descendant)</div>
+          <div class="child">Another child element (descendant)</div>
+        </div>
+        <div class="sibling-example mb-3">
+          <div class="item">Item 1</div>
+          <div class="item">
+            Item 2 (adjacent sibling should have margin-top)
+          </div>
+        </div>
+        <!-- Pseudo-class example using hover -->
+        <a href="#" class="hover-link mb-3">Hover over this link</a>
+        <!-- nth-child example -->
+        <ul class="alternating-list mb-3">
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+          <li>List item 4</li>
+        </ul>
+      </section>
+
+      <!-- 3. Pseudo-elements ::before and ::after -->
+
+      <section id="pseudo-elements" class="mb-5">
+        <h2>Pseudo-elements ::before and ::after</h2>
+        <!-- Heading with a custom icon added before it -->
+        <h3 class="icon-heading">Section Heading</h3>
+        <!-- Button with custom text appended after its content -->
+        <button class="btn btn-primary with-text">Press Me</button>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

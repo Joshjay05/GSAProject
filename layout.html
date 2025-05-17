@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="layout.css" />
+    <title>CSS Pseudo-Elements, Flexbox & Grid Demo</title>
+  </head>
+  <body>
+    <h2 class="sticky-header">Sticky Header (Scroll to See)</h2>
+
+    <h3>Pseudo-Elements</h3>
+    <div class="pseudo-box"></div>
+
+    <div class="first-letter-demo" style="width: 80%; margin: 1rem auto">
+      <p>
+        This paragraph uses <code>::first-letter</code> to highlight the first
+        letter.
+      </p>
+    </div>
+
+    <div class="first-line-demo" style="width: 80%; margin: 1rem auto">
+      <p>
+        This line uses <code>::first-line</code> to transform the first line of
+        the paragraph.
+      </p>
+    </div>
+
+    <h3>Flexbox Layout</h3>
+    <div class="flex-container">
+      <div class="flex-item">Flex Item 1</div>
+      <div class="flex-item">Flex Item 2</div>
+      <div class="flex-item">Flex Item 3</div>
+      <div class="flex-item">Flex Item 4</div>
+    </div>
+
+    <h3>Grid Layout</h3>
+    <div class="grid-container">
+      <div class="grid-item">Grid 1</div>
+      <div class="grid-item">Grid 2</div>
+      <div class="grid-item">Grid 3</div>
+      <div class="grid-item">Grid 4</div>
+      <div class="grid-item">Grid 5</div>
+      <div class="grid-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+        nesciunt molestiae, labore ipsum at corporis enim, dolorem nemo aperiam
+        expedita itaque autem inventore cum nisi rem explicabo quibusdam.
+        Aliquam repellendus ipsa eos vitae consectetur, explicabo facilis id!
+        Dolorem, nemo distinctio.
+      </div>
+    </div>
+
+    <h3>Grid with Named Areas</h3>
+    <div class="area-container">
+      <div class="header">Header</div>
+      <div class="sidebar">Sidebar</div>
+      <div class="main">Main Content</div>
+      <div class="footer">Footer</div>
+      <div class="extra">Extra Content</div>
+    </div>
+
+    <h3>Nth-Child Example</h3>
+    <ul
+      class="nth-child-demo"
+      style="width: 200px; margin: auto; padding: 0; list-style: none"
+    >
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
+
+    <div class="relative_container">
+      <span class="absolute">1</span>
+    </div>
+  </body>
+</html>

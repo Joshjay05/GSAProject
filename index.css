@@ -1,0 +1,180 @@
+/* selectors */
+
+/* id */
+/* class */
+
+* {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  color: red;
+  background-color: yellow;
+}
+
+#title {
+  font-size: 20px;
+  font-weight: 500;
+  color: blue;
+  position: fixed;
+  width: 100vw;
+  background-color: rgb(250, 125, 125);
+}
+
+/* specificity */
+
+/* id > class */
+
+.parent-container {
+  /* display: flex; */
+  /* flex-direction: row-reverse; */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-around;
+  align-items: center;
+}
+
+.first-child_container {
+  background-color: red;
+  color: white;
+  padding: 20px 40px;
+  margin: 40px 80px;
+  /* padding-block: ; */
+  /* padding-inline:; */
+}
+
+.second-child_container {
+  background-color: yellow;
+  padding: 20px;
+  /* padding: 20px 40px; */
+  /* margin: 40px 80px; */
+  position: fixed;
+}
+.second-child_container h3 {
+  position: sticky;
+  top: 80%;
+}
+.btn-hover {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-hover:hover {
+  background: #0056b3;
+}
+
+.btn-hover::after {
+  content: " ➜";
+  position: absolute;
+  right: 10px;
+}
+
+.card {
+  width: 200px;
+  background: #eee;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  width: 50vw;
+  height: 40vh;
+  /* max-width: ; */
+  /* max-height: ; */
+  /* min-height: ; */
+  /* min-width: none; */
+  background: blue;
+  margin: 20px;
+  padding: 30px;
+  /* display: block; */
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* div,
+button,
+p,
+h3 {
+  background: green;
+  font-size: 30px;
+} */
+
+.box h3 {
+  color: yellow;
+  font-size: 60px;
+}
+.box > .para {
+  color: red;
+  font-size: 32px;
+}
+.box .para + .pa {
+  color: yellowgreen;
+  font-size: 2rem;
+}
+
+/* .pa {
+  color: yellow;
+  font-size: 20px;
+} */
+/*  */
+
+/* units: px, %, vh, vw, em, rem  */
+ul {
+  list-style: circle;
+  margin: 0;
+  padding: 0;
+}
+
+/* li {
+  margin-bottom: 10px;
+} */
+
+/* responsive design */
+/* Media queries */
+/* mobile */
+@media screen and (max-width: 650px) {
+  .box {
+    width: 100%;
+    height: auto;
+    background-color: aquamarine;
+  }
+  .parent-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* tablet */
+@media screen and (min-width: 650px) and (max-width: 979px) {
+  .box {
+    width: 50%;
+    height: auto;
+    background-color: #004a63;
+  }
+}
+/* desktop */
+@media screen and (min-width: 980px) {
+  .box {
+    width: 33.33%;
+    height: auto;
+    background-color: #63398a;
+  }
+}
+/* .second-child_containe */
+
+/* position : static, relative, absolute, sticky */

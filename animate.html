@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation</title>
+    <link rel="stylesheet" href="animate.css" />
+  </head>
+  <body>
+    <!-- <h1>CSS Mastery Guide</h1> -->
+
+    <!-- <div class="nav-container">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#animations" class="nav-link">Animations</a>
+        </li>
+        <li class="nav-item">
+          <a href="#pseudo-elements" class="nav-link">Pseudo-elements</a>
+        </li>
+        <li class="nav-item">
+          <a href="#flexbox" class="nav-link">Flexbox</a>
+        </li>
+        <li class="nav-item"><a href="#grid" class="nav-link">Grid</a></li>
+        <li class="nav-item">
+          <a href="#sticky" class="nav-link">Sticky Positioning</a>
+        </li>
+      </ul>
+    </div> -->
+
+    <!-- ANIMATIONS SECTION -->
+    <section id="animations" class="section">
+      <h2>CSS Animations</h2>
+
+      <p>
+        CSS animations allow you to create dynamic transitions and animations
+        without using JavaScript. They consist of two components:
+        <strong>keyframes</strong> that define the stages of animation and
+        <strong>animation properties</strong> that configure how those keyframes
+        are applied.
+      </p>
+
+      <h3>Basic Animation Example</h3>
+      <div class="demo-container">
+        <div id="animation-demo-1"></div>
+      </div>
+
+      <h3>Animation Properties</h3>
+      <p>These properties control how the animation behaves:</p>
+      <ul>
+        <li>
+          <strong>animation-name</strong>: Specifies the name of the @keyframes
+          rule
+        </li>
+        <li>
+          <strong>animation-duration</strong>: How long the animation takes to
+          complete one cycle
+        </li>
+        <li>
+          <strong>animation-timing-function</strong>: How the animation
+          progresses through keyframes (ease, linear, etc.)
+        </li>
+        <li>
+          <strong>animation-delay</strong>: Time before the animation starts
+        </li>
+        <li>
+          <strong>animation-iteration-count</strong>: How many times the
+          animation should run
+        </li>
+        <li>
+          <strong>animation-direction</strong>: Whether the animation should
+          alternate direction or reset
+        </li>
+        <li>
+          <strong>animation-fill-mode</strong>: What styles apply before/after
+          the animation
+        </li>
+        <li>
+          <strong>animation-play-state</strong>: Whether the animation is
+          running or paused
+        </li>
+        <li><strong>animation</strong>: Shorthand for all properties above</li>
+      </ul>
+
+      <h3>Different Animation Examples</h3>
+      <div class="demo-container">
+        <div id="animation-demo-2">
+          <div class="animation-box" id="box1">Pulse</div>
+          <div class="animation-box" id="box2">Shake</div>
+          <div class="animation-box" id="box3">Flip</div>
+          <div class="animation-box" id="box4">Bounce</div>
+        </div>
+      </div>
+
+      <h3>CSS Transitions</h3>
+      <p>
+        Transitions are simpler animations that occur when an element changes
+        from one state to another. They're perfect for hover effects and UI
+        interactions.
+      </p>
+
+      <div class="demo-container">
+        <div id="transition-demo">
+          <div class="transition-box" id="transition-box1">Scale</div>
+          <div class="transition-box" id="transition-box2">Shape</div>
+          <div class="transition-box" id="transition-box3">Rotate</div>
+        </div>
+      </div>
+
+      <p>Transition properties include:</p>
+      <ul>
+        <li>
+          <strong>transition-property</strong>: Which CSS properties to animate
+        </li>
+        <li>
+          <strong>transition-duration</strong>: How long the transition takes
+        </li>
+        <li>
+          <strong>transition-timing-function</strong>: The speed curve of the
+          transition
+        </li>
+        <li><strong>transition-delay</strong>: When the transition starts</li>
+        <li><strong>transition</strong>: Shorthand for all properties above</li>
+      </ul>
+    </section>
+
+    <!-- PSEUDO-ELEMENTS SECTION -->
+    <section id="pseudo-elements" class="section">
+      <h2>CSS Pseudo-elements</h2>
+
+      <p>
+        Pseudo-elements let you style specific parts of an element. They use the
+        double colon syntax (<code>::</code>) and can create decorative or
+        functional elements without adding extra markup.
+      </p>
+
+      <h3>::before and ::after</h3>
+      <p>
+        The most common pseudo-elements are <code>::before</code> and
+        <code>::after</code>, which insert content before or after the content
+        of an element.
+      </p>
+
+      <div class="demo-container">
+        <div id="pseudo-example-1">
+          This is the main content. Notice the "Before" and "After" labels that
+          are added using pseudo-elements.
+        </div>
+      </div>
+
+      <div class="code-block">
+        #pseudo-example-1 { position: relative; padding: 20px; background-color:
+        #f8f9fa; border: 1px solid #e1e4e8; } #pseudo-example-1::before {
+        content: "Before"; position: absolute; top: -10px; left: 10px;
+        background-color: #e74c3c; color: white; padding: 0 10px; border-radius:
+        3px; } #pseudo-example-1::after { content: "After"; position: absolute;
+        bottom: -10px; right: 10px; background-color: #3498db; color: white;
+        padding: 0 10px; border-radius: 3px; }
+      </div>
+
+      <h3>Interactive Example: Fancy Link Underline</h3>
+      <div class="demo-container">
+        <p>
+          Hover over this
+          <a href="#" class="fancy-link">fancy animated link</a> to see the
+          underline animation effect.
+        </p>
+      </div>
+
+      <div class="code-block">
+        .fancy-link { position: relative; color: #2c3e50; text-decoration: none;
+        font-weight: bold; } .fancy-link::after { content: ''; position:
+        absolute; width: 100%; height: 2px; bottom: -2px; left: 0;
+        background-color: #3498db; transform: scaleX(0); transition: transform
+        0.3s ease-out; transform-origin: bottom right; }
+        .fancy-link:hover::after { transform: scaleX(1); transform-origin:
+        bottom left; }
+      </div>
+
+      <h3>::first-letter and ::first-line</h3>
+      <p>
+        These pseudo-elements let you style the first letter or first line of
+        text:
+      </p>
+
+      <div class="demo-container">
+        <p class="first-letter-example">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempus
+          velit a libero hendrerit, ut vestibulum felis tincidunt. Curabitur at
+          metus ut nisi vulputate tincidunt vel quis ipsum.
+        </p>
+
+        <p class="first-line-example">
+          This paragraph has its first line styled differently from the rest of
+          the text. This is the second line of the paragraph, which has normal
+          styling. Notice how the styling applies only to the first line,
+          regardless of where it breaks.
+        </p>
+      </div>
+
+      <div class="code-block">
+        .first-letter-example::first-letter { font-size: 42px; float: left;
+        line-height: 0.8; margin-right: 8px; color: #e74c3c; font-weight: bold;
+        } .first-line-example::first-line { font-weight: bold; color: #3498db; }
+      </div>
+
+      <h3>Other Pseudo-elements</h3>
+      <ul>
+        <li>
+          <strong>::selection</strong>: Styles text when it's selected by the
+          user
+        </li>
+        <li>
+          <strong>::placeholder</strong>: Styles placeholder text in form inputs
+        </li>
+        <li><strong>::marker</strong>: Styles list item markers</li>
+        <li>
+          <strong>::backdrop</strong>: Styles the backdrop of elements in
+          fullscreen mode
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

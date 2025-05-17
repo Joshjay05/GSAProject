@@ -1,0 +1,42 @@
+| Property                               | Description                               |
+| -------------------------------------- | ----------------------------------------- |
+| `display: grid`                        | Enables grid                              |
+| `grid-template-columns`                | Defines number/size of columns            |
+| `grid-template-rows`                   | Defines number/size of rows               |
+| `grid-template-areas`                  | Named areas                               |
+| `grid-auto-rows` / `grid-auto-columns` | Size for auto-created tracks              |
+| `grid-auto-flow`                       | Controls placement direction (row/column) |
+| `gap`, `row-gap`, `column-gap`         | Spacing                                   |
+
+
+| Property                               | Description                   |
+| -------------------------------------- | ----------------------------- |
+| `grid-column`, `grid-row`              | Shorthand for `start / end`   |
+| `grid-column-start`, `grid-column-end` | Where a grid item starts/ends |
+| `grid-row-start`, `grid-row-end`       | Same for rows                 |
+| `grid-area`                            | Can name areas or span items  |
+| `justify-self`, `align-self`           | Aligns items individually     |
+| `place-self`                           | shorthand for align + justify |
+
+
+
+
+| Property          | Values & Description                                                    |
+| ----------------- | ----------------------------------------------------------------------- |
+| `display`         | `flex` or `inline-flex`                                                 |
+| `flex-direction`  | `row`, `row-reverse`, `column`, `column-reverse`                        |
+| `flex-wrap`       | `nowrap`, `wrap`, `wrap-reverse`                                        |
+| `justify-content` | `flex-start`, `center`, `space-between`, `space-around`, `space-evenly` |
+| `align-items`     | `stretch`, `center`, `flex-start`, `flex-end`, `baseline`               |
+| `align-content`   | Aligns *multiple* lines (`stretch`, `center`, etc.)                     |
+
+
+
+| Property      | Values & Description                                   |
+| ------------- | ------------------------------------------------------ |
+| `flex`        | shorthand for `flex-grow`, `flex-shrink`, `flex-basis` |
+| `flex-grow`   | defines ability to grow (`0` or `1+`)                  |
+| `flex-shrink` | defines ability to shrink (`0` or `1+`)                |
+| `flex-basis`  | sets the initial size                                  |
+| `align-self`  | overrides `align-items` for a single item              |
+| `order`       | controls the order (default is `0`)                    |

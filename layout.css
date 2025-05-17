@@ -1,0 +1,226 @@
+/* <style> */
+/* ---------- PSEUDO-ELEMENTS ---------- */
+.pseudo-box {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  background-color: lightcoral;
+  margin: 1rem auto;
+}
+
+.pseudo-box::before {
+  content: "Before";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  background-color: teal;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.pseudo-box::after {
+  content: "After";
+  position: absolute;
+  bottom: -25px;
+  right: 0;
+  background-color: navy;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.first-letter-demo::first-letter {
+  color: red;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.first-line-demo::first-line {
+  text-transform: uppercase;
+}
+
+::selection {
+  background: yellow;
+  color: black;
+}
+
+/* ---------- FLEXBOX ---------- */
+
+.flex-item {
+  /* flex: 1 1 150px; */
+  /* flex-grow 1, flex-shrink-1 flex-basis (size of 150px) */
+
+  flex-basis: 250px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  background: skyblue;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 6px;
+}
+
+/* ---------- GRID ---------- */
+
+.grid-item {
+  background: lightgreen;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 6px;
+}
+
+/* Named grid areas example */
+.area-container {
+  display: grid;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main"
+    "extra footer";
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  margin: 2rem;
+}
+
+.header {
+  grid-area: header;
+  background: salmon;
+  padding: 10px;
+}
+.sidebar {
+  grid-area: sidebar;
+  background: lightblue;
+  padding: 10px;
+}
+.main {
+  grid-area: main;
+  background: lightgoldenrodyellow;
+  padding: 10px;
+}
+.footer {
+  grid-area: footer;
+  background: lightgray;
+  padding: 10px;
+}
+.extra {
+  grid-area: extra;
+  padding: 10px;
+  background: lightgoldenrodyellow;
+}
+
+/* ---------- STICKY ---------- */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: gold;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 999;
+}
+
+/* ---------- NTH-CHILD ---------- */
+.nth-child-demo li:nth-child(odd) {
+  background: #ddd;
+}
+
+.nth-child-demo li:nth-child(even) {
+  background: #bbb;
+}
+/* </style> */
+
+/* position
+relative
+absolute
+fixed
+sticky
+static-default
+
+
+
+*/
+
+.relative_container {
+  position: relative;
+  background: #c5ffbd;
+  border: 1px solid #9d0000;
+  padding: 30px;
+  margin-block: 40px;
+}
+
+.absolute {
+  background: red;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid;
+  color: white;
+  padding: 10px;
+  top: -18%;
+  /* bottom: ; */
+  /* left: ; */
+  right: 35%;
+}
+
+/* responsive design */
+/* //mobile */
+@media screen and (max-width: 640px) {
+  .grid-container {
+    display: grid;
+    /* grid-template-columns: repeat(1, minmax(100px, 1fr)); */
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    /* gap: 2px; */
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+
+/* //tablet */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .flex-container {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+
+/* //desktop */
+@media screen and (min-width: 1025px) {
+  .grid-container {
+    display: grid;
+    /* grid-template-columns: repeat(4, 100px); */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    background: #f9f9f9;
+  }
+  .flex-container {
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    gap: 1rem;
+    justify-content: space-around;
+    padding: 1rem;
+    background: #f0f0f0;
+  }
+}
+
+/* //large screen */
+/* @media screen and (min-width:1280px) {
+  
+} */
+
+/* units */
+/* px, em, rem, vh, vw ,%*/
+
+/* animations */
+transform property and  keyframe
